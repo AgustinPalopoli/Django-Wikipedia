@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %} 
+
+
+{% block title %} 
+    Search
+{% endblock %} 
+
+
+{% block body %}
+    <h1>Search results</h1>
+
+    <ul>
+        {% if entries %}
+            {% for entry in entries %}
+                <a href="{% url 'encyclopedia:entry' entry %}"><li>{{ entry }}</li></a>
+            {% endfor %}
+        {% else %}
+            <h4>This entry doesn't exist. You can create it in "create new page"</h4>
+        {% endif %}
+    </ul>
+
+{% endblock %}
