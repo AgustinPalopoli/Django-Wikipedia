@@ -32,6 +32,12 @@ A Wikipedia-like online encyclopedia built with Django. This project allows user
    ```
    python manage.py migrate
    ```
+   
+  **Note:** The database file (`db.sqlite3`) is **not included** in this repository. It will be created when you run the `migrate` command above. If you need to create migrations     for model changes, use:
+
+  ```powershell
+  python manage.py makemigrations
+  ```
 5. Start the development server:
    ```
    python manage.py runserver
